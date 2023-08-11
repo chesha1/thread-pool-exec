@@ -1,4 +1,7 @@
 # thread-pool-exec
 
 ## TODO
--[ ] Futex in Baton.h
+- [ ] **Futex.h** in Baton.h  
+- [ ] **MPMCQueue.h** in LifoSemMPMCQueue.h
+- [ ] **LifoSem.h** in LifoSemMPMCQueue.h
+- [ ] **SharedMutex.h** in ThreadPoolExecutor.h

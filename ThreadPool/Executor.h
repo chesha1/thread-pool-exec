@@ -291,7 +291,7 @@ namespace ThreadPool {
 
         template<typename F>
         FOLLY_ERASE static void invokeCatchingExns(char const *p, F f) noexcept {
-            catch_exception(f, invokeCatchingExnsLog, p);
+            folly::catch_exception(f, invokeCatchingExnsLog, p);
         }
 
     protected:
