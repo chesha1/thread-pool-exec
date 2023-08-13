@@ -11,6 +11,7 @@
 #include <folly/Portability.h>
 #include <folly/Synchronized.h>
 #include <folly/portability/SysTypes.h>
+#include <folly/io/async/Request.h>
 
 namespace ThreadPool {
     // 观察者提供对于线程启动/停止事件的监听
@@ -84,7 +85,8 @@ namespace ThreadPool {
     public:
         virtual ~QueueObserver() {}
 
-        virtual intptr_t onEnqueued(const RequestContext *) = 0;
+//        virtual intptr_t onEnqueued(const RequestContext *) = 0;
+        virtual intptr_t onEnqueued(const folly::RequestContext *) = 0;
 
         virtual void onDequeued(intptr_t) = 0;
     };
