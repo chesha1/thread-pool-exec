@@ -3,7 +3,7 @@
 #include <glog/logging.h>
 
 #include "Executor.h"
-#include <folly/MPMCQueue.h>
+#include "MPMCQueue.h"
 #include <folly/Range.h>
 #include "executors/task_queue/BlockingQueue.h"
 #include <folly/synchronization/LifoSem.h>
@@ -129,7 +129,7 @@ namespace ThreadPool {
 
     private:
         Semaphore sem_;
-        std::vector<folly::MPMCQueue<T>> queues_;
+        std::vector<ThreadPool::MPMCQueue<T>> queues_;
     };
 
 } // namespace ThreadPool

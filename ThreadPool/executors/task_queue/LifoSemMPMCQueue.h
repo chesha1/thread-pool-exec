@@ -1,6 +1,6 @@
 #pragma once
 
-#include <folly/MPMCQueue.h>
+#include "MPMCQueue.h"
 #include "executors/task_queue/BlockingQueue.h"
 #include <folly/synchronization/LifoSem.h>
 
@@ -79,7 +79,7 @@ namespace ThreadPool {
         // 等待的消费者线程才会被唤醒并继续其操作
         // 2. 限制并发访问：信号量也确保了当多个线程尝试从队列中取元素时，
         // 只有一个线程可以成功地取到元素，其它线程会被阻塞直到队列中再次有可用的元素
-        folly::MPMCQueue<T> queue_;
+        ThreadPool::MPMCQueue<T> queue_;
     };
 
 } // namespace ThreadPool
