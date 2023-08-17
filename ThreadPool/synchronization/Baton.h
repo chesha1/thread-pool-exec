@@ -9,7 +9,7 @@
 
 #include <folly/Likely.h>
 #include <folly/detail/AsyncTrace.h>
-#include <folly/detail/Futex.h>
+#include "detail/Futex.h"
 #include <folly/detail/MemoryIdler.h>
 #include <folly/portability/Asm.h>
 #include <folly/synchronization/AtomicUtil.h>

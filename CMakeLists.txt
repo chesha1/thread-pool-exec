@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(folly REQUIRED)
-include_directories("/opt/homebrew/Cellar/folly/2023.07.24.00/include")
-link_directories("/opt/homebrew/Cellar/folly/2023.07.24.00/lib")
+include_directories("/opt/homebrew/Cellar/folly/2023.08.14.00/include")
+link_directories("/opt/homebrew/Cellar/folly/2023.08.14.00/lib")
 
 find_package(boost REQUIRED)
 include_directories("/opt/homebrew/Cellar/boost/1.82.0_1/include")
@@ -22,8 +22,8 @@ include_directories("/opt/homebrew/Cellar/gflags/2.2.2/include")
 link_directories("/opt/homebrew/Cellar/gflags/2.2.2/lib")
 
 find_package(fmt REQUIRED)
-include_directories("/opt/homebrew/Cellar/fmt/10.0.0/include")
-link_directories("/opt/homebrew/Cellar/fmt/10.0.0/lib")
+include_directories("/opt/homebrew/Cellar/fmt/10.1.0/include")
+link_directories("/opt/homebrew/Cellar/fmt/10.1.0/lib")
 
 include_directories(ThreadPool)
 
